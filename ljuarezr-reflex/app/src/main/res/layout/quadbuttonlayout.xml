@@ -41,7 +41,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="player 2"
+        android:text="Player 2"
         android:id="@+id/PlayerTwoBuzzer"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
@@ -51,7 +51,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="player 3"
+        android:text="Player 3"
         android:id="@+id/PlayerThreeBuzzer"
         android:layout_alignParentStart="true"
         android:layout_toStartOf="@+id/ThreeFourSepLine"
