@@ -20,6 +20,7 @@ GNU General Public License for more details.
 
 package com.example.ljuarezr.ljuarezr_reflex;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -58,8 +59,14 @@ public class MainActivity extends ActionBarActivity {
 
     public void StatisticsToast(MenuItem menu){
         Toast.makeText(this, "Statistics", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, ChooseStatActivity.class );
+        startActivity(intent);
     }
-    public void EmailStatisticsToast(MenuItem menu){
-        Toast.makeText(this, "Email Statistics", Toast.LENGTH_SHORT).show();
+
+    public void EmailStatsToToast(MenuItem menu) {
+        Toast.makeText(this, "Statistics", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this,EmailStatsToActivity.class);
+        startActivity(intent);
     }
+
 }

@@ -7,6 +7,6 @@
         android:title="Statistics"
         android:onClick="StatisticsToast"/>
     <item android:id= "@+id/emailStatsMenu"
-        android:title="Email Statistics"
-        android:onClick="EmailStatisticsToast"/>
+        android:title="Email Stats To"
+        android:onClick="EmailStatsToToast"/>
 </menu>

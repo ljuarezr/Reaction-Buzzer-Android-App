@@ -52,6 +52,14 @@
             android:name=".QuadBuzzerActivity"
             android:label="@string/title_activity_quad_buzzer" >
         </activity>
+        <activity
+            android:name=".EmailStatsTo"
+            android:label="@string/title_activity_email_stats_to" >
+        </activity>
+        <activity
+            android:name=".EmailStatsToActivity"
+            android:label="@string/title_activity_email_stats_to" >
+        </activity>
     </application>
 
 </manifest>
