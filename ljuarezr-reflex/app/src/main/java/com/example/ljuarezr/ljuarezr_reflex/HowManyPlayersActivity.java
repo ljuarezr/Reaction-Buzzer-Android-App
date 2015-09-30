@@ -1,9 +1,12 @@
 package com.example.ljuarezr.ljuarezr_reflex;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class HowManyPlayersActivity extends ActionBarActivity {
 
@@ -11,6 +14,33 @@ public class HowManyPlayersActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.numberplayerslayout);
+
+        Button twoPlayersButton = (Button) findViewById(R.id.twoPlayersButton);
+        twoPlayersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(HowManyPlayersActivity.this, DoubleBuzzerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button threePlayersButton = (Button) findViewById(R.id.threePlayersButton);
+        threePlayersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(HowManyPlayersActivity.this, TripleBuzzerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button fourPlayersButton = (Button) findViewById(R.id.fourPlayersButton);
+        fourPlayersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(HowManyPlayersActivity.this, QuadBuzzerActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

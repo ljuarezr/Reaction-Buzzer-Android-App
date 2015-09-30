@@ -1,9 +1,12 @@
 package com.example.ljuarezr.ljuarezr_reflex;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class ReactionStatsActivity extends ActionBarActivity {
 
@@ -11,6 +14,42 @@ public class ReactionStatsActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reactiontimeslayout);
+
+        Button minButton = (Button) findViewById(R.id.MinimumButton);
+        minButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(ReactionStatsActivity.this, ReactionStatsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button maxButton = (Button) findViewById(R.id.MaximumButton);
+        maxButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(ReactionStatsActivity.this, ReactionStatsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button avgButton = (Button) findViewById(R.id.AverageButton);
+        avgButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(ReactionStatsActivity.this, ReactionStatsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button medButton = (Button) findViewById(R.id.MedianButton);
+        medButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(ReactionStatsActivity.this, ReactionStatsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

@@ -1,9 +1,12 @@
 package com.example.ljuarezr.ljuarezr_reflex;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class ChooseStatActivity extends ActionBarActivity {
 
@@ -11,6 +14,24 @@ public class ChooseStatActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choosestatlayout);
+
+        Button reactionTimesButton = (Button) findViewById(R.id.ReactionTimesButton);
+        reactionTimesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(ChooseStatActivity.this, ReactionStatsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button countStatsButton = (Button) findViewById(R.id.BuzzerCountsButton);
+        countStatsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(ChooseStatActivity.this, ChooseBuzzerCountsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

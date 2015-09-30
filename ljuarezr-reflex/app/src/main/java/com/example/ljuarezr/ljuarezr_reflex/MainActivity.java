@@ -23,9 +23,14 @@ package com.example.ljuarezr.ljuarezr_reflex;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
+
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -33,6 +38,25 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button singleButton = (Button) findViewById(R.id.SingleUserButton);
+        singleButton.setOnClickListener(new OnClickListener() {
+            @Override
+             public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, InstructionsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button gameshowButton = (Button) findViewById(R.id.GameShowButton);
+        gameshowButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, HowManyPlayersActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -68,5 +92,7 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(MainActivity.this,EmailStatsToActivity.class);
         startActivity(intent);
     }
+
+
 
 }

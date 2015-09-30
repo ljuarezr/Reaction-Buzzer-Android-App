@@ -1,9 +1,13 @@
 package com.example.ljuarezr.ljuarezr_reflex;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class InstructionsActivity extends ActionBarActivity {
 
@@ -11,6 +15,15 @@ public class InstructionsActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.instructionlayout);
+
+        Button playButton = (Button) findViewById(R.id.PlayButton);
+        playButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(InstructionsActivity.this, SingleBuzzerActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
