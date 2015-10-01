@@ -28,7 +28,7 @@ public class ChooseStatActivity extends ActionBarActivity {
         countStatsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Intent intent = new Intent(ChooseStatActivity.this, ChooseBuzzerCountsActivity.class);
+                Intent intent = new Intent(ChooseStatActivity.this, BuzzCountsNumbersActivity.class);
                 startActivity(intent);
             }
         });

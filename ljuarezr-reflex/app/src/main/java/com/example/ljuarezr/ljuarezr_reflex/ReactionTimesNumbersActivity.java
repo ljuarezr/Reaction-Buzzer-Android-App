@@ -1,36 +1,22 @@
 package com.example.ljuarezr.ljuarezr_reflex;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
-public class ChooseBuzzerCountsActivity extends ActionBarActivity {
+public class ReactionTimesNumbersActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.buzzercountslayout);
-
-        Button minButton = (Button) findViewById(R.id.twoPlayerCountButton);
-        minButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(ChooseBuzzerCountsActivity.this, BuzzCountsNumbersActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
+        setContentView(R.layout.reactiontimenumberslayout);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_choose_buzzer_counts, menu);
+        getMenuInflater().inflate(R.menu.menu_reaction_times_numbers, menu);
         return true;
     }
 

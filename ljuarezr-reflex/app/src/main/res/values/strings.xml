@@ -13,4 +13,6 @@
     <string name="title_activity_triple_buzzer">TripleBuzzerActivity</string>
     <string name="title_activity_quad_buzzer">QuadBuzzerActivity</string>
     <string name="title_activity_email_stats_to">EmailStatsTo</string>
+    <string name="title_activity_reaction_times_numbers">ReactionTimesNumbersActivity</string>
+    <string name="title_activity_buzz_counts_numbers">BuzzCountsNumbersActivity</string>
 </resources>

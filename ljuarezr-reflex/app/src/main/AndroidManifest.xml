@@ -60,6 +60,14 @@
             android:name=".EmailStatsToActivity"
             android:label="@string/title_activity_email_stats_to" >
         </activity>
+        <activity
+            android:name=".ReactionTimesNumbersActivity"
+            android:label="@string/title_activity_reaction_times_numbers" >
+        </activity>
+        <activity
+            android:name=".BuzzCountsNumbersActivity"
+            android:label="@string/title_activity_buzz_counts_numbers" >
+        </activity>
     </application>
 
 </manifest>

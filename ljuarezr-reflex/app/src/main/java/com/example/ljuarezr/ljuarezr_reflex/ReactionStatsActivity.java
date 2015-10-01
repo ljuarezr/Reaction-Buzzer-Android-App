@@ -19,7 +19,7 @@ public class ReactionStatsActivity extends ActionBarActivity {
         minButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Intent intent = new Intent(ReactionStatsActivity.this, ReactionStatsActivity.class);
+                Intent intent = new Intent(ReactionStatsActivity.this, ReactionTimesNumbersActivity.class);
                 startActivity(intent);
             }
         });
@@ -28,7 +28,7 @@ public class ReactionStatsActivity extends ActionBarActivity {
         maxButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Intent intent = new Intent(ReactionStatsActivity.this, ReactionStatsActivity.class);
+                Intent intent = new Intent(ReactionStatsActivity.this, ReactionTimesNumbersActivity.class);
                 startActivity(intent);
             }
         });
@@ -37,7 +37,7 @@ public class ReactionStatsActivity extends ActionBarActivity {
         avgButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Intent intent = new Intent(ReactionStatsActivity.this, ReactionStatsActivity.class);
+                Intent intent = new Intent(ReactionStatsActivity.this, ReactionTimesNumbersActivity.class);
                 startActivity(intent);
             }
         });
@@ -46,7 +46,7 @@ public class ReactionStatsActivity extends ActionBarActivity {
         medButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Intent intent = new Intent(ReactionStatsActivity.this, ReactionStatsActivity.class);
+                Intent intent = new Intent(ReactionStatsActivity.this, ReactionTimesNumbersActivity.class);
                 startActivity(intent);
             }
         });
