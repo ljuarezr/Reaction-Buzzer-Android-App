@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class ReactionStatsActivity extends ActionBarActivity {
 
@@ -19,6 +20,7 @@ public class ReactionStatsActivity extends ActionBarActivity {
         minButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
+                minimumChosen(arg0);
                 Intent intent = new Intent(ReactionStatsActivity.this, ReactionTimesNumbersActivity.class);
                 startActivity(intent);
             }
@@ -28,6 +30,7 @@ public class ReactionStatsActivity extends ActionBarActivity {
         maxButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
+                maximumChosen(arg0);
                 Intent intent = new Intent(ReactionStatsActivity.this, ReactionTimesNumbersActivity.class);
                 startActivity(intent);
             }
@@ -37,8 +40,10 @@ public class ReactionStatsActivity extends ActionBarActivity {
         avgButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
+                averageChosen(arg0);
                 Intent intent = new Intent(ReactionStatsActivity.this, ReactionTimesNumbersActivity.class);
                 startActivity(intent);
+
             }
         });
 
@@ -46,6 +51,7 @@ public class ReactionStatsActivity extends ActionBarActivity {
         medButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
+                medianChosen(arg0);
                 Intent intent = new Intent(ReactionStatsActivity.this, ReactionTimesNumbersActivity.class);
                 startActivity(intent);
             }
@@ -72,5 +78,19 @@ public class ReactionStatsActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void minimumChosen(View v) {
+        Toast.makeText(this, "Minimum", Toast.LENGTH_SHORT).show();
+       // minManager.getMinimumStats();
+    }
+    public void maximumChosen(View v) {
+        Toast.makeText(this, "Minimum", Toast.LENGTH_SHORT).show();
+    }
+    public void averageChosen(View v) {
+        Toast.makeText(this, "Minimum", Toast.LENGTH_SHORT).show();
+    }
+    public void medianChosen(View v) {
+        Toast.makeText(this, "Minimum", Toast.LENGTH_SHORT).show();
     }
 }

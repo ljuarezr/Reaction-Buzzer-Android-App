@@ -93,6 +93,11 @@ public class MainActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
+    public void ClearStatsToast(MenuItem menu) {
+        Toast.makeText(this, "All Stats cleared", Toast.LENGTH_SHORT).show();
+        //need to do some work to actually clear the stats!!!!
+    }
+
 
 
 }
