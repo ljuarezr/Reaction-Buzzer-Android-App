@@ -2,6 +2,9 @@ package com.example.ljuarezr.ljuarezr_reflex;
 
 import java.util.List;
 
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertTrue;
+
 /**
  * Created by ljuarezr on 10/1/15.
  */
@@ -16,10 +19,25 @@ public class ReactionTimeStatsController {
         return reactionTimesList;
     }
 
-    public ReactionTimesList chooseMinimum(){
-        return getReactionTimesList().
+
+    public void clearAll(){
+        getReactionTimesList().clearAll();
     }
 
+    public void addSingleBuzz(SingleBuzz singleBuzz) {
+        getReactionTimesList().addSingleBuzz(singleBuzz);
+    }
 
+    public List<SingleBuzz> getLast10 () {
+        return getReactionTimesList().getLast10();
+    }
+
+    public List<SingleBuzz> getLast100 () {
+        return getReactionTimesList().getLast100();
+    }
+
+    public List<SingleBuzz> getAllTime() {
+        return getReactionTimesList().getAllTime();
+    }
 
 }

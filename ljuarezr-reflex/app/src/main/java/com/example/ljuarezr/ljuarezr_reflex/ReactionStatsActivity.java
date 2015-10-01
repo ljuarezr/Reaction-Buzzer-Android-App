@@ -82,6 +82,7 @@ public class ReactionStatsActivity extends ActionBarActivity {
 
     public void minimumChosen(View v) {
         Toast.makeText(this, "Minimum", Toast.LENGTH_SHORT).show();
+
        // minManager.getMinimumStats();
     }
     public void maximumChosen(View v) {
