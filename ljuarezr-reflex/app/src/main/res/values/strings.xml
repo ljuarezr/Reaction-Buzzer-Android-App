@@ -15,4 +15,8 @@
     <string name="title_activity_email_stats_to">EmailStatsTo</string>
     <string name="title_activity_reaction_times_numbers">ReactionTimesNumbersActivity</string>
     <string name="title_activity_buzz_counts_numbers">BuzzCountsNumbersActivity</string>
+    <string name="title_activity_player1_wins">Player1Wins</string>
+    <string name="title_activity_player2_wins">Player2WinsActivity</string>
+    <string name="title_activity_player3_wins">Player3WinsActivity</string>
+    <string name="title_activity_player4_wins">Player4WinsActivity</string>
 </resources>

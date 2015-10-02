@@ -1,9 +1,13 @@
 package com.example.ljuarezr.ljuarezr_reflex;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class TripleBuzzerActivity extends ActionBarActivity {
 
@@ -11,6 +15,43 @@ public class TripleBuzzerActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.triplebuzzerlayout);
+
+        Button player1Button = (Button) findViewById(R.id.PlayerOneBuzzer);
+        player1Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Toast.makeText(TripleBuzzerActivity.this, "Player 1", Toast.LENGTH_SHORT);
+                TripleController tripleCounts = new TripleController();
+                tripleCounts.incrementP1();
+                Intent intent = new Intent(TripleBuzzerActivity.this, HowManyPlayersActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        Button player2Button = (Button) findViewById(R.id.PlayerTwoBuzzer);
+        player2Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Toast.makeText(TripleBuzzerActivity.this, "Player 2", Toast.LENGTH_SHORT);
+                TripleController tripleCounts = new TripleController();
+                tripleCounts.incrementP2();
+                Intent intent = new Intent(TripleBuzzerActivity.this, HowManyPlayersActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button player3Button = (Button) findViewById(R.id.PlayerThreeBuzzer);
+        player3Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Toast.makeText(TripleBuzzerActivity.this, "Player 3", Toast.LENGTH_SHORT);
+                TripleController tripleCounts = new TripleController();
+                tripleCounts.incrementP3();
+                Intent intent = new Intent(TripleBuzzerActivity.this, HowManyPlayersActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

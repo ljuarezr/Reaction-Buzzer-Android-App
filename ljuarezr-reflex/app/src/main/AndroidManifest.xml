@@ -68,6 +68,22 @@
             android:name=".BuzzCountsNumbersActivity"
             android:label="@string/title_activity_buzz_counts_numbers" >
         </activity>
+        <activity
+            android:name=".Player1Wins"
+            android:label="@string/title_activity_player1_wins" >
+        </activity>
+        <activity
+            android:name=".Player2WinsActivity"
+            android:label="@string/title_activity_player2_wins" >
+        </activity>
+        <activity
+            android:name=".Player3WinsActivity"
+            android:label="@string/title_activity_player3_wins" >
+        </activity>
+        <activity
+            android:name=".Player4WinsActivity"
+            android:label="@string/title_activity_player4_wins" >
+        </activity>
     </application>
 
 </manifest>

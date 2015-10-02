@@ -94,8 +94,16 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void ClearStatsToast(MenuItem menu) {
+        ReactionTimeStatsController rtsController = new ReactionTimeStatsController();
+        rtsController.clearAll();
+        QuadController quadCounts = new QuadController();
+        quadCounts.clear();
+        TripleController tripleController = new TripleController();
+        tripleController.clear();
+        DoubleController doubleController = new DoubleController();
+        doubleController.clear();
+
         Toast.makeText(this, "All Stats cleared", Toast.LENGTH_SHORT).show();
-        //need to do some work to actually clear the stats!!!!
     }
 
 

@@ -65,29 +65,30 @@ public class ReactionTimesList {
         return reactionStatList;
     }
 
-    public float getMin(List<SingleBuzz> buzzList) throws EmptyReactionTimesListException {
+    public int getMin(List<SingleBuzz> buzzList) throws EmptyReactionTimesListException {
         int size = buzzList.size();
         if (size <= 0) {
             throw new EmptyReactionTimesListException();
         }
         SingleBuzz minBuzz = buzzList.get(0);
-        int index = 0;
-        while (index < size){
-            if ((buzzList.get(index).getDelay()) < (minBuzz.getDelay())){
+        int index = 1;
+        while (index < size) {
+            if ((buzzList.get(index).getDelay()) < (minBuzz.getDelay())) {
                 minBuzz = buzzList.get(index);
-                index = index +1;
+                index = index + 1;
             }
         }
         return minBuzz.getDelay();
     }
 
-    public float getMax(List<SingleBuzz> buzzList) throws EmptyReactionTimesListException {
+
+    public int getMax(List<SingleBuzz> buzzList) throws EmptyReactionTimesListException {
         int size = buzzList.size();
         if (size <= 0) {
             throw new EmptyReactionTimesListException();
         }
         SingleBuzz maxBuzz = buzzList.get(0);
-        int index = 0;
+        int index = 1;
         while (index < size){
             if ((buzzList.get(index).getDelay()) < (maxBuzz.getDelay())){
                 maxBuzz = buzzList.get(index);
@@ -97,12 +98,12 @@ public class ReactionTimesList {
         return maxBuzz.getDelay();
     }
 
-    public float getAvg(List<SingleBuzz> buzzList) throws EmptyReactionTimesListException {
+    public int getAvg(List<SingleBuzz> buzzList) throws EmptyReactionTimesListException {
         int size = buzzList.size();
         if (size <= 0) {
             throw new EmptyReactionTimesListException();
         }
-        float sumDelay = buzzList.get(0).getDelay();
+        int sumDelay = buzzList.get(1).getDelay();
         int index = 1;
         while (index < size){
             sumDelay += buzzList.get(index).getDelay();
@@ -111,13 +112,13 @@ public class ReactionTimesList {
         return sumDelay/size ;
     }
 
-    public float getMed(List<SingleBuzz> buzzList) throws EmptyReactionTimesListException {
+    public int getMed(List<SingleBuzz> buzzList) throws EmptyReactionTimesListException {
         int size = buzzList.size();
         if (size <= 0) {
             throw new EmptyReactionTimesListException();
         }
         int index = 0;
-        List<Float> DelayList = new ArrayList<>() ;
+        List<Integer> DelayList = new ArrayList<>() ;
         while (index < size){
             DelayList.add(buzzList.get(index).getDelay()) ;
             index = index +1;
@@ -126,4 +127,6 @@ public class ReactionTimesList {
         int medIndex = (int)Math.floor(size/2);
         return DelayList.get(medIndex);
     }
+
+
 }

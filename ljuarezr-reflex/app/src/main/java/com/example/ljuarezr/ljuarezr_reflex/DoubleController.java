@@ -1,0 +1,29 @@
+package com.example.ljuarezr.ljuarezr_reflex;
+
+/**
+ * Created by ljuarezr on 10/2/15.
+ */
+public class DoubleController {
+
+    //Lazy Singleton
+    private static DoubleBuzzerCounts doubleCounts = null;
+
+    static public DoubleBuzzerCounts getDoubleCounts(){
+        if (doubleCounts == null) {
+            doubleCounts = new DoubleBuzzerCounts();
+        }
+        return doubleCounts;
+    }
+
+    public void incrementP1(){
+        getDoubleCounts().incrementP1();
+    }
+
+    public void incrementP2(){
+        getDoubleCounts().incrementP2();
+    }
+
+    public void clear(){
+        getDoubleCounts().clear();
+    }
+}

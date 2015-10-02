@@ -4,20 +4,19 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import java.util.Timer;
 
-public class SingleBuzzerActivity extends ActionBarActivity {
+public class Player1WinsActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.singlebuttonlayout);
+        setContentView(R.layout.activity_player1_wins);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_single_buzzer, menu);
+        getMenuInflater().inflate(R.menu.menu_player1_wins, menu);
         return true;
     }
 

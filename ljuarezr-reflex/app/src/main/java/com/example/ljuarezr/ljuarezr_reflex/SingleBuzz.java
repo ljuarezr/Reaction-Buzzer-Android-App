@@ -8,14 +8,14 @@ import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
 public class SingleBuzz {
 
-    private float delay;
+    private int delay;
 
     public void CreateSingleBuzz(int delayTime){
         assertTrue(delayTime > 0);
         delay = delayTime;
     }
 
-    public float getDelay(){
+    public int getDelay(){
         return this.delay;
     }
 }

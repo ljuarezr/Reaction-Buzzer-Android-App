@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.List;
+
 public class ReactionStatsActivity extends ActionBarActivity {
 
     @Override
@@ -82,8 +84,11 @@ public class ReactionStatsActivity extends ActionBarActivity {
 
     public void minimumChosen(View v) {
         Toast.makeText(this, "Minimum", Toast.LENGTH_SHORT).show();
+        //Need to get the minimum of each of the last10, last100 and the alltime lists
+        ReactionTimeStatsController rtsController = new ReactionTimeStatsController();
+        List<SingleBuzz> last10List = rtsController.getLast10();
 
-       // minManager.getMinimumStats();
+
     }
     public void maximumChosen(View v) {
         Toast.makeText(this, "Minimum", Toast.LENGTH_SHORT).show();
