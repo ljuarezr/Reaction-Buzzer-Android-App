@@ -53,10 +53,6 @@
             android:label="@string/title_activity_quad_buzzer" >
         </activity>
         <activity
-            android:name=".EmailStatsTo"
-            android:label="@string/title_activity_email_stats_to" >
-        </activity>
-        <activity
             android:name=".EmailStatsToActivity"
             android:label="@string/title_activity_email_stats_to" >
         </activity>
@@ -69,8 +65,8 @@
             android:label="@string/title_activity_buzz_counts_numbers" >
         </activity>
         <activity
-            android:name=".Player1Wins"
-            android:label="@string/title_activity_player1_wins" >
+            android:name=".Player1WinsActivity"
+            android:label="Player1WinsActivity" >
         </activity>
         <activity
             android:name=".Player2WinsActivity"

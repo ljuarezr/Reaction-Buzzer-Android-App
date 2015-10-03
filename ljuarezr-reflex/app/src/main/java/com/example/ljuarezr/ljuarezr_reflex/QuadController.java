@@ -35,4 +35,10 @@ public class QuadController {
     public void clear(){
         getQuadCounts().clear();
     }
+
+    public int getP14(){return getQuadCounts().getP1();}
+    public int getP24(){return getQuadCounts().getP2();}
+    public int getP34(){return getQuadCounts().getP3();}
+    public int getP44(){return getQuadCounts().getP4();}
+
 }

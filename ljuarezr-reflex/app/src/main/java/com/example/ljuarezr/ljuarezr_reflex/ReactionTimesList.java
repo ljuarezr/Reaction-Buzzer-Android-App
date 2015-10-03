@@ -13,27 +13,26 @@ import static junit.framework.Assert.assertTrue;
  */
 public class ReactionTimesList {
 
-    private List<SingleBuzz> reactionStatList = new ArrayList<SingleBuzz>();
+    private ArrayList<Integer> reactionStatList = new ArrayList<>();
 
     public void clearAll(){
         reactionStatList.clear();
         assertEquals(0, reactionStatList.size());
     }
 
-    public void addSingleBuzz(SingleBuzz singleBuzz) {
+    public void addSingleBuzz(int singleBuzz) {
         reactionStatList.add(singleBuzz);
         assertTrue(reactionStatList.contains(singleBuzz));
     }
 
-    public List<SingleBuzz> getLast10 () {
+    public ArrayList<Integer> getLast10 () {
         //Two cases:
         //Case 1. the list has 10 or more items
         //Then just get the last ten items
         if (reactionStatList.size() >= 10) {
-            List<SingleBuzz> last10list;
-            last10list = reactionStatList.subList((reactionStatList.size() - 10),
+            ArrayList last10list;
+            last10list =(ArrayList) reactionStatList.subList((reactionStatList.size() - 10),
                     (reactionStatList.size() - 1));
-            //want to return an ArrayList, not a List!!
             return last10list;
         } else {
             //Case 2. the list has less than 10 items (even 0)
@@ -43,14 +42,14 @@ public class ReactionTimesList {
         }
     }
 
-    public List<SingleBuzz> getLast100() {
+    public ArrayList<Integer> getLast100() {
         //Two cases:
         //Case 1. the list has 10 or more items
         //Then just get the last 100 items
         if (reactionStatList.size() >= 100) {
-            List<SingleBuzz> last100list;
-            last100list = reactionStatList.subList((reactionStatList.size() - 100),
-                    (reactionStatList.size() - 1));
+            ArrayList<Integer> last100list;
+            last100list = (ArrayList) (reactionStatList.subList((reactionStatList.size() - 100),
+                    (reactionStatList.size() - 1)));
             //want to return an ArrayList, not a List!!
             return last100list;
         } else {
@@ -61,71 +60,49 @@ public class ReactionTimesList {
         }
     }
 
-    public List<SingleBuzz> getAllTime(){
+    public ArrayList<Integer> getAllTime(){
         return reactionStatList;
     }
 
-    public int getMin(List<SingleBuzz> buzzList) throws EmptyReactionTimesListException {
+    public int getMin(ArrayList<Integer> buzzList) throws EmptyReactionTimesListException {
         int size = buzzList.size();
         if (size <= 0) {
             throw new EmptyReactionTimesListException();
         }
-        SingleBuzz minBuzz = buzzList.get(0);
-        int index = 1;
-        while (index < size) {
-            if ((buzzList.get(index).getDelay()) < (minBuzz.getDelay())) {
-                minBuzz = buzzList.get(index);
-                index = index + 1;
-            }
-        }
-        return minBuzz.getDelay();
+        int min = Collections.min(buzzList);
+        return min;
     }
 
 
-    public int getMax(List<SingleBuzz> buzzList) throws EmptyReactionTimesListException {
+    public int getMax(ArrayList<Integer> buzzList) throws EmptyReactionTimesListException {
         int size = buzzList.size();
         if (size <= 0) {
             throw new EmptyReactionTimesListException();
         }
-        SingleBuzz maxBuzz = buzzList.get(0);
-        int index = 1;
-        while (index < size){
-            if ((buzzList.get(index).getDelay()) < (maxBuzz.getDelay())){
-                maxBuzz = buzzList.get(index);
-                index = index +1;
-            }
-        }
-        return maxBuzz.getDelay();
+        int max = Collections.max(buzzList);
+        return max;
     }
 
-    public int getAvg(List<SingleBuzz> buzzList) throws EmptyReactionTimesListException {
+    public int getAvg(ArrayList<Integer> buzzList) throws EmptyReactionTimesListException {
         int size = buzzList.size();
         if (size <= 0) {
             throw new EmptyReactionTimesListException();
         }
-        int sumDelay = buzzList.get(1).getDelay();
+        int sum = buzzList.get(0);
         int index = 1;
         while (index < size){
-            sumDelay += buzzList.get(index).getDelay();
+            sum += buzzList.get(index);
             index = index +1;
         }
-        return sumDelay/size ;
+        return sum/size ;
     }
 
-    public int getMed(List<SingleBuzz> buzzList) throws EmptyReactionTimesListException {
+    public int getMed(ArrayList<Integer> buzzList) throws EmptyReactionTimesListException {
         int size = buzzList.size();
-        if (size <= 0) {
-            throw new EmptyReactionTimesListException();
-        }
-        int index = 0;
-        List<Integer> DelayList = new ArrayList<>() ;
-        while (index < size){
-            DelayList.add(buzzList.get(index).getDelay()) ;
-            index = index +1;
-        }
-        Collections.sort(DelayList);
+        if (size <= 0) {throw new EmptyReactionTimesListException();}
+        Collections.sort(buzzList);
         int medIndex = (int)Math.floor(size/2);
-        return DelayList.get(medIndex);
+        return buzzList.get(medIndex);
     }
 
 

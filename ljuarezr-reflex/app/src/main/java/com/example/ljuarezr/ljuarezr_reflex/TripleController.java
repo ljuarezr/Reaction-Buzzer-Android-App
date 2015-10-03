@@ -30,4 +30,9 @@ public class TripleController {
     public void clear(){
         getTripleCounts().clear();
     }
+
+    public int getP13(){return getTripleCounts().getP1();}
+    public int getP23(){return getTripleCounts().getP2();}
+    public int getP33(){return getTripleCounts().getP3();}
+
 }

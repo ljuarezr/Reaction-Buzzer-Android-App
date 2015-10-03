@@ -24,4 +24,7 @@ public class DoubleBuzzerCounts {
         p1 = 0;
         p2 = 0;
     }
+
+    public int getP1() {return p1;}
+    public int getP2() {return p2;}
 }

@@ -26,4 +26,11 @@ public class DoubleController {
     public void clear(){
         getDoubleCounts().clear();
     }
+
+    public int getP12(){return getDoubleCounts().getP1();}
+    public int getP22(){return getDoubleCounts().getP2();}
+
+
+
+
 }

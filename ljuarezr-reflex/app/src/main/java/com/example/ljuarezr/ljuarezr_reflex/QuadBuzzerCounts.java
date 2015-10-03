@@ -37,4 +37,9 @@ public class QuadBuzzerCounts{
         p3 = 0;
         p4 = 0;
     }
+
+    public int getP1() {return p1;}
+    public int getP2() {return p2;}
+    public int getP3() {return p3;}
+    public int getP4() {return p4;}
 }

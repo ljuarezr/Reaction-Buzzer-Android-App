@@ -7,8 +7,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ReactionStatsActivity extends ActionBarActivity {
@@ -84,19 +86,70 @@ public class ReactionStatsActivity extends ActionBarActivity {
 
     public void minimumChosen(View v) {
         Toast.makeText(this, "Minimum", Toast.LENGTH_SHORT).show();
-        //Need to get the minimum of each of the last10, last100 and the alltime lists
         ReactionTimeStatsController rtsController = new ReactionTimeStatsController();
-        List<SingleBuzz> last10List = rtsController.getLast10();
+        try {
+            ArrayList<Integer> minList = (ArrayList) rtsController.getMinBuzz();
+            //Set the values in list in the view
+            TextView vlast10 = (TextView) findViewById( R.id.Last10TimesValue);
+            vlast10.setText(Integer.toString(minList.get(0)));
+            TextView vlast100 = (TextView) findViewById( R.id.Last100TimesValue);
+            vlast100.setText(Integer.toString(minList.get(1)));
+            TextView valltime = (TextView) findViewById( R.id.AllTimeValue);
+            valltime.setText(Integer.toString(minList.get(2)));
+
+        } catch (EmptyReactionTimesListException e){
+            Toast.makeText(this, "There are no times recorded yet!", Toast.LENGTH_SHORT);
+        }
 
 
     }
     public void maximumChosen(View v) {
-        Toast.makeText(this, "Minimum", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Maximum", Toast.LENGTH_SHORT).show();
+        ReactionTimeStatsController rtsController = new ReactionTimeStatsController();
+        try {
+            ArrayList<Integer> maxList = (ArrayList) rtsController.getMinBuzz();
+            //Set the values in list in the view
+            TextView vlast10 = (TextView) findViewById( R.id.Last10TimesValue);
+            vlast10.setText(Integer.toString(maxList.get(0)));
+            TextView vlast100 = (TextView) findViewById( R.id.Last100TimesValue);
+            vlast100.setText(Integer.toString(maxList.get(1)));
+            TextView valltime = (TextView) findViewById( R.id.AllTimeValue);
+            valltime.setText(Integer.toString(maxList.get(2)));
+
+        } catch (EmptyReactionTimesListException e){
+            Toast.makeText(this, "There are no times recorded yet!", Toast.LENGTH_SHORT);
+        }
     }
     public void averageChosen(View v) {
-        Toast.makeText(this, "Minimum", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Average", Toast.LENGTH_SHORT).show();
+        ReactionTimeStatsController rtsController = new ReactionTimeStatsController();
+        try {
+            ArrayList<Integer> avgList = (ArrayList) rtsController.getMinBuzz();
+            //Set the values in list in the view
+            TextView vlast10 = (TextView) findViewById( R.id.Last10TimesValue);
+            vlast10.setText(Integer.toString(avgList.get(0)));
+            TextView vlast100 = (TextView) findViewById( R.id.Last100TimesValue);
+            vlast100.setText(Integer.toString(avgList.get(1)));
+            TextView valltime = (TextView) findViewById( R.id.AllTimeValue);
+            valltime.setText(Integer.toString(avgList.get(2)));
+        } catch (EmptyReactionTimesListException e){
+            Toast.makeText(this, "There are no times recorded yet!", Toast.LENGTH_SHORT);
+        }
     }
     public void medianChosen(View v) {
-        Toast.makeText(this, "Minimum", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Median", Toast.LENGTH_SHORT).show();
+        ReactionTimeStatsController rtsController = new ReactionTimeStatsController();
+        try {
+            ArrayList<Integer> medList = (ArrayList) rtsController.getMinBuzz();
+            //Set the values in list in the view
+            TextView vlast10 = (TextView) findViewById( R.id.Last10TimesValue);
+            vlast10.setText(Integer.toString(medList.get(0)));
+            TextView vlast100 = (TextView) findViewById( R.id.Last100TimesValue);
+            vlast100.setText(Integer.toString(medList.get(1)));
+            TextView valltime = (TextView) findViewById( R.id.AllTimeValue);
+            valltime.setText(Integer.toString(medList.get(2)));
+        } catch (EmptyReactionTimesListException e){
+            Toast.makeText(this, "There are no times recorded yet!", Toast.LENGTH_SHORT);
+        }
     }
 }

@@ -25,27 +25,27 @@ public class ReactionTimeStatsController {
         getReactionTimesList().clearAll();
     }
 
-    public void addSingleBuzz(SingleBuzz singleBuzz) {
+    public void addSingleBuzz(int singleBuzz) {
         getReactionTimesList().addSingleBuzz(singleBuzz);
     }
 
-    public List<SingleBuzz> getLast10 () {
+    public ArrayList<Integer> getLast10 () {
         return getReactionTimesList().getLast10();
     }
 
-    public List<SingleBuzz> getLast100 () {
+    public ArrayList<Integer> getLast100 () {
         return getReactionTimesList().getLast100();
     }
 
-    public List<SingleBuzz> getAllTime() {
+    public ArrayList<Integer> getAllTime() {
         return getReactionTimesList().getAllTime();
     }
 
-    public List<Integer> getMin() throws EmptyReactionTimesListException{;
+    public List<Integer> getMinBuzz() throws EmptyReactionTimesListException{;
         List<Integer> mins = new ArrayList<>();
-        mins.add(getReactionTimesList().getMin(getReactionTimesList().getLast10()));
-        mins.add(getReactionTimesList().getMin(getReactionTimesList().getLast100()));
-        mins.add(getReactionTimesList().getMin(getReactionTimesList().getAllTime()));
+            mins.add(getReactionTimesList().getMin(getReactionTimesList().getLast10()));
+            mins.add(getReactionTimesList().getMin(getReactionTimesList().getLast100()));
+            mins.add(getReactionTimesList().getMin(getReactionTimesList().getAllTime()));
         return mins;
     }
 

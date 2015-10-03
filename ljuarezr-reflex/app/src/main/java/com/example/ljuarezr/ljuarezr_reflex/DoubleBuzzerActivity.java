@@ -20,10 +20,9 @@ public class DoubleBuzzerActivity extends ActionBarActivity {
         player1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Toast.makeText(DoubleBuzzerActivity.this, "Player 1", Toast.LENGTH_SHORT);
                 DoubleController doubleCounts = new DoubleController();
                 doubleCounts.incrementP1();
-                Intent intent = new Intent(DoubleBuzzerActivity.this, HowManyPlayersActivity.class);
+                Intent intent = new Intent(DoubleBuzzerActivity.this, Player1WinsActivity.class);
                 startActivity(intent);
             }
         });
@@ -35,7 +34,7 @@ public class DoubleBuzzerActivity extends ActionBarActivity {
                 Toast.makeText(DoubleBuzzerActivity.this, "Player 2", Toast.LENGTH_SHORT);
                 DoubleController doubleCounts = new DoubleController();
                 doubleCounts.incrementP2();
-                Intent intent = new Intent(DoubleBuzzerActivity.this, HowManyPlayersActivity.class);
+                Intent intent = new Intent(DoubleBuzzerActivity.this,  Player2WinsActivity.class);
                 startActivity(intent);
             }
         });

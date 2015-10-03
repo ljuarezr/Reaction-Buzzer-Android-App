@@ -20,10 +20,9 @@ public class TripleBuzzerActivity extends ActionBarActivity {
         player1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Toast.makeText(TripleBuzzerActivity.this, "Player 1", Toast.LENGTH_SHORT);
                 TripleController tripleCounts = new TripleController();
                 tripleCounts.incrementP1();
-                Intent intent = new Intent(TripleBuzzerActivity.this, HowManyPlayersActivity.class);
+                Intent intent = new Intent(TripleBuzzerActivity.this, Player1WinsActivity.class);
                 startActivity(intent);
             }
         });
@@ -33,10 +32,9 @@ public class TripleBuzzerActivity extends ActionBarActivity {
         player2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Toast.makeText(TripleBuzzerActivity.this, "Player 2", Toast.LENGTH_SHORT);
                 TripleController tripleCounts = new TripleController();
                 tripleCounts.incrementP2();
-                Intent intent = new Intent(TripleBuzzerActivity.this, HowManyPlayersActivity.class);
+                Intent intent = new Intent(TripleBuzzerActivity.this,  Player2WinsActivity.class);
                 startActivity(intent);
             }
         });
@@ -45,10 +43,9 @@ public class TripleBuzzerActivity extends ActionBarActivity {
         player3Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Toast.makeText(TripleBuzzerActivity.this, "Player 3", Toast.LENGTH_SHORT);
                 TripleController tripleCounts = new TripleController();
                 tripleCounts.incrementP3();
-                Intent intent = new Intent(TripleBuzzerActivity.this, HowManyPlayersActivity.class);
+                Intent intent = new Intent(TripleBuzzerActivity.this,  Player3WinsActivity.class);
                 startActivity(intent);
             }
         });

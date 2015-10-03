@@ -4,6 +4,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class BuzzCountsNumbersActivity extends ActionBarActivity {
 
@@ -33,5 +36,37 @@ public class BuzzCountsNumbersActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void getCounts(View v){
+        Toast.makeText(this, "Getting Stats...", Toast.LENGTH_SHORT).show();
+
+        DoubleController doubleController = new DoubleController();
+        TripleController tripleController = new TripleController();
+        QuadController  quadController = new QuadController();
+
+        //set the double counts in their view
+        TextView v12 = (TextView) findViewById( R.id.P12Value);
+        v12.setText(Integer.toString(doubleController.getP12()));
+        TextView v22 = (TextView) findViewById( R.id.P22Value);
+        v22.setText(Integer.toString(doubleController.getP22()));
+
+        //set the triple counts in their view
+        TextView v13 = (TextView) findViewById( R.id.P13Value);
+        v13.setText(Integer.toString(tripleController.getP13()));
+        TextView v23 = (TextView) findViewById( R.id.P23Value);
+        v23.setText(Integer.toString(tripleController.getP23()));
+        TextView v33 = (TextView) findViewById( R.id.P33Value);
+        v33.setText(Integer.toString(tripleController.getP33()));
+
+        //set the quad counts in their view
+        TextView v14 = (TextView) findViewById( R.id.P14Value);
+        v14.setText(Integer.toString(quadController.getP14()));
+        TextView v24 = (TextView) findViewById( R.id.P24Value);
+        v24.setText(Integer.toString(quadController.getP24()));
+        TextView v34 = (TextView) findViewById( R.id.P34Value);
+        v34.setText( Integer.toString(quadController.getP34()));
+        TextView v44 = (TextView) findViewById( R.id.P44Value);
+        v44.setText(Integer.toString(quadController.getP44()));
     }
 }
