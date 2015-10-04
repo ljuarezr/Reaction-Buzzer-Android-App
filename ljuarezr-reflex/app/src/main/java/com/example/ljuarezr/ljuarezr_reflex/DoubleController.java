@@ -1,5 +1,7 @@
 package com.example.ljuarezr.ljuarezr_reflex;
 
+import java.util.List;
+
 /**
  * Created by ljuarezr on 10/2/15.
  */
@@ -29,6 +31,8 @@ public class DoubleController {
 
     public int getP12(){return getDoubleCounts().getP1();}
     public int getP22(){return getDoubleCounts().getP2();}
+
+    public List<Integer> getStatsList() {return getDoubleCounts().getStatsList();}
 
 
 

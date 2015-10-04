@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/Last10TimesValue"
+        android:id="@+id/Last10Times"
         android:layout_below="@+id/Last10Times"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp" />

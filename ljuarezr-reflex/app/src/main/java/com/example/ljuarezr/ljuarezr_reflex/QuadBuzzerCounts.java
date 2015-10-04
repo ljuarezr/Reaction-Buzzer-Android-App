@@ -1,5 +1,7 @@
 package com.example.ljuarezr.ljuarezr_reflex;
 
+import java.util.List;
+
 /**
  * Created by ljuarezr on 10/1/15.
  */
@@ -8,6 +10,7 @@ public class QuadBuzzerCounts{
     private int p2;
     private int p3;
     private int p4;
+    private List<Integer> list;
 
     public QuadBuzzerCounts(){
         p1 = 0;
@@ -42,4 +45,11 @@ public class QuadBuzzerCounts{
     public int getP2() {return p2;}
     public int getP3() {return p3;}
     public int getP4() {return p4;}
+
+    public List<Integer> getStatsList(){
+        list.add(p1);
+        list.add(p2);
+        list.add(p3);
+        list.add(p4);
+        return list;}
 }

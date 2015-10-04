@@ -11,7 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Timer;
+import java.util.Random;
 
 public class ReactionStatsActivity extends ActionBarActivity {
 
@@ -25,8 +26,6 @@ public class ReactionStatsActivity extends ActionBarActivity {
             @Override
             public void onClick(View arg0) {
                 minimumChosen(arg0);
-                Intent intent = new Intent(ReactionStatsActivity.this, ReactionTimesNumbersActivity.class);
-                startActivity(intent);
             }
         });
 
@@ -35,8 +34,6 @@ public class ReactionStatsActivity extends ActionBarActivity {
             @Override
             public void onClick(View arg0) {
                 maximumChosen(arg0);
-                Intent intent = new Intent(ReactionStatsActivity.this, ReactionTimesNumbersActivity.class);
-                startActivity(intent);
             }
         });
 
@@ -45,8 +42,6 @@ public class ReactionStatsActivity extends ActionBarActivity {
             @Override
             public void onClick(View arg0) {
                 averageChosen(arg0);
-                Intent intent = new Intent(ReactionStatsActivity.this, ReactionTimesNumbersActivity.class);
-                startActivity(intent);
 
             }
         });
@@ -56,8 +51,6 @@ public class ReactionStatsActivity extends ActionBarActivity {
             @Override
             public void onClick(View arg0) {
                 medianChosen(arg0);
-                Intent intent = new Intent(ReactionStatsActivity.this, ReactionTimesNumbersActivity.class);
-                startActivity(intent);
             }
         });
     }
@@ -90,7 +83,7 @@ public class ReactionStatsActivity extends ActionBarActivity {
         try {
             ArrayList<Integer> minList = (ArrayList) rtsController.getMinBuzz();
             //Set the values in list in the view
-            TextView vlast10 = (TextView) findViewById( R.id.Last10TimesValue);
+            TextView vlast10 = (TextView) findViewById( R.id.Last10Times);
             vlast10.setText(Integer.toString(minList.get(0)));
             TextView vlast100 = (TextView) findViewById( R.id.Last100TimesValue);
             vlast100.setText(Integer.toString(minList.get(1)));
@@ -107,9 +100,9 @@ public class ReactionStatsActivity extends ActionBarActivity {
         Toast.makeText(this, "Maximum", Toast.LENGTH_SHORT).show();
         ReactionTimeStatsController rtsController = new ReactionTimeStatsController();
         try {
-            ArrayList<Integer> maxList = (ArrayList) rtsController.getMinBuzz();
+            ArrayList<Integer> maxList = (ArrayList) rtsController.getMaxBuzz();
             //Set the values in list in the view
-            TextView vlast10 = (TextView) findViewById( R.id.Last10TimesValue);
+            TextView vlast10 = (TextView) findViewById( R.id.Last10Times);
             vlast10.setText(Integer.toString(maxList.get(0)));
             TextView vlast100 = (TextView) findViewById( R.id.Last100TimesValue);
             vlast100.setText(Integer.toString(maxList.get(1)));
@@ -124,9 +117,9 @@ public class ReactionStatsActivity extends ActionBarActivity {
         Toast.makeText(this, "Average", Toast.LENGTH_SHORT).show();
         ReactionTimeStatsController rtsController = new ReactionTimeStatsController();
         try {
-            ArrayList<Integer> avgList = (ArrayList) rtsController.getMinBuzz();
+            ArrayList<Integer> avgList = (ArrayList) rtsController.getAvgBuzz();
             //Set the values in list in the view
-            TextView vlast10 = (TextView) findViewById( R.id.Last10TimesValue);
+            TextView vlast10 = (TextView) findViewById( R.id.Last10Times);
             vlast10.setText(Integer.toString(avgList.get(0)));
             TextView vlast100 = (TextView) findViewById( R.id.Last100TimesValue);
             vlast100.setText(Integer.toString(avgList.get(1)));
@@ -140,9 +133,9 @@ public class ReactionStatsActivity extends ActionBarActivity {
         Toast.makeText(this, "Median", Toast.LENGTH_SHORT).show();
         ReactionTimeStatsController rtsController = new ReactionTimeStatsController();
         try {
-            ArrayList<Integer> medList = (ArrayList) rtsController.getMinBuzz();
+            ArrayList<Integer> medList = (ArrayList) rtsController.getMedBuzz();
             //Set the values in list in the view
-            TextView vlast10 = (TextView) findViewById( R.id.Last10TimesValue);
+            TextView vlast10 = (TextView) findViewById( R.id.Last10Times);
             vlast10.setText(Integer.toString(medList.get(0)));
             TextView vlast100 = (TextView) findViewById( R.id.Last100TimesValue);
             vlast100.setText(Integer.toString(medList.get(1)));

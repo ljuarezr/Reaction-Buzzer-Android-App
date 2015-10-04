@@ -29,6 +29,7 @@ public class ReactionTimeStatsController {
         getReactionTimesList().addSingleBuzz(singleBuzz);
     }
 
+    /*
     public ArrayList<Integer> getLast10 () {
         return getReactionTimesList().getLast10();
     }
@@ -40,7 +41,7 @@ public class ReactionTimeStatsController {
     public ArrayList<Integer> getAllTime() {
         return getReactionTimesList().getAllTime();
     }
-
+    */
     public List<Integer> getMinBuzz() throws EmptyReactionTimesListException{;
         List<Integer> mins = new ArrayList<>();
             mins.add(getReactionTimesList().getMin(getReactionTimesList().getLast10()));
@@ -49,27 +50,27 @@ public class ReactionTimeStatsController {
         return mins;
     }
 
-    public List<Integer> getMax() throws EmptyReactionTimesListException{;
+    public List<Integer> getMaxBuzz() throws EmptyReactionTimesListException{;
         List<Integer> maxs = new ArrayList<>();
-        maxs.add(getReactionTimesList().getMin(getReactionTimesList().getLast10()));
-        maxs.add(getReactionTimesList().getMin(getReactionTimesList().getLast100()));
-        maxs.add(getReactionTimesList().getMin(getReactionTimesList().getAllTime()));
+        maxs.add(getReactionTimesList().getMax(getReactionTimesList().getLast10()));
+        maxs.add(getReactionTimesList().getMax(getReactionTimesList().getLast100()));
+        maxs.add(getReactionTimesList().getMax(getReactionTimesList().getAllTime()));
         return maxs;
     }
 
-    public List<Integer> getAvg() throws EmptyReactionTimesListException{;
+    public List<Integer> getAvgBuzz() throws EmptyReactionTimesListException{;
         List<Integer> avgs = new ArrayList<>();
-        avgs.add(getReactionTimesList().getMin(getReactionTimesList().getLast10()));
-        avgs.add(getReactionTimesList().getMin(getReactionTimesList().getLast100()));
-        avgs.add(getReactionTimesList().getMin(getReactionTimesList().getAllTime()));
+        avgs.add(getReactionTimesList().getAvg(getReactionTimesList().getLast10()));
+        avgs.add(getReactionTimesList().getAvg(getReactionTimesList().getLast100()));
+        avgs.add(getReactionTimesList().getAvg(getReactionTimesList().getAllTime()));
         return avgs;
     }
 
-    public List<Integer> getMed() throws EmptyReactionTimesListException{;
+    public List<Integer> getMedBuzz() throws EmptyReactionTimesListException{;
         List<Integer> meds = new ArrayList<>();
-        meds.add(getReactionTimesList().getMin(getReactionTimesList().getLast10()));
-        meds.add(getReactionTimesList().getMin(getReactionTimesList().getLast100()));
-        meds.add(getReactionTimesList().getMin(getReactionTimesList().getAllTime()));
+        meds.add(getReactionTimesList().getMed(getReactionTimesList().getLast10()));
+        meds.add(getReactionTimesList().getMed(getReactionTimesList().getLast100()));
+        meds.add(getReactionTimesList().getMed(getReactionTimesList().getAllTime()));
         return meds;
     }
 

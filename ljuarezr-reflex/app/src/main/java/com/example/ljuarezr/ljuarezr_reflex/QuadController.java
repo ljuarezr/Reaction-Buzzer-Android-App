@@ -1,5 +1,7 @@
 package com.example.ljuarezr.ljuarezr_reflex;
 
+import java.util.List;
+
 /**
  * Created by ljuarezr on 10/2/15.
  */
@@ -40,5 +42,7 @@ public class QuadController {
     public int getP24(){return getQuadCounts().getP2();}
     public int getP34(){return getQuadCounts().getP3();}
     public int getP44(){return getQuadCounts().getP4();}
+
+    public List<Integer> getStatsList() {return getQuadCounts().getStatsList();}
 
 }

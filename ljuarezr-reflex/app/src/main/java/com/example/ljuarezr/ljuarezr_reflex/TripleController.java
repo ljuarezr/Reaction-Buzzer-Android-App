@@ -1,5 +1,7 @@
 package com.example.ljuarezr.ljuarezr_reflex;
 
+import java.util.List;
+
 /**
  * Created by ljuarezr on 10/2/15.
  */
@@ -34,5 +36,6 @@ public class TripleController {
     public int getP13(){return getTripleCounts().getP1();}
     public int getP23(){return getTripleCounts().getP2();}
     public int getP33(){return getTripleCounts().getP3();}
+    public List<Integer> getStatsList() {return getTripleCounts().getStatsList();}
 
 }

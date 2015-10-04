@@ -88,7 +88,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void EmailStatsToToast(MenuItem menu) {
-        Toast.makeText(this, "Statistics", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, " Email Statistics", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MainActivity.this,EmailStatsToActivity.class);
         startActivity(intent);
     }
